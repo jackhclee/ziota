@@ -18,5 +18,4 @@ object ZApp extends ZIOAppDefault {
     entry.provideEnvironment(
      ZEnvironment(BookServiceImpl()) ++ ZEnvironment(AuthorServiceImpl()))
   }
-
 }

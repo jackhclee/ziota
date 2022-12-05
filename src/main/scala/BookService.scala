@@ -5,7 +5,10 @@ trait BookService {
 }
 
 case class BookServiceImpl() extends BookService {
-  override def count(): Long = 1997
+  override def count(): Long = {
+    ZIO.logInfo("BookService count() called")
+    1997
+  }
 }
 
 object BookServiceImpl {
